@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <title>Temperature Converter</title>
+    <style>
+        body{
+            background-image: url(file:///E:/Me/Temperature%20tool/celsius-convert.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        h1{
+            font-family: 'Righteous', cursive;
+            margin-left: 35%;
+            /* margin-top: 5%; */
+            font-size: 40px;
+        }
+        .white{
+            height: 500px;
+            width: 600px;
+            background-color: white;
+            margin-left: 27%;
+        }
+        .center{
+            margin-left: 10%;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+        }
+        .temp{
+            width: 36%;
+            height: 32px;
+            margin-left: 0%;
+            padding-left: 0%;
+            font-size: 15px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-color: blanchedalmond;
+            box-shadow: 0px 1px 8px -5px;
+            margin-top: 2%;
+            margin-left: 1%;
+        }
+        .shift{
+            margin-left: 10%;
+        }  
+    </style>
+    <script>
+        function fun1(){
+        var cel =Number (document.getElementById('inp').value);        
+        // alert(cel);
+        var result = (cel*1.8)+32;
+        alert("Your result is : " + result);
+        //     document.write(Result);
+        }
+      </script>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <div class="white">
+       <h2>Convert Celsius into Fahrenheit</h2>
+       <div class="shift">
+       From :
+       <select class="temp">
+        <option>Select your temperature</option>
+        <option>Celcius</option> 
+        <option>Fahrenheit</option>
+        <option>Kelvin</option>
+       </select>
+       </div>
+       <div class="shift">
+       To :
+       <select class="temp">
+        <option>Select your temperature</option>
+        <option>Celcius</option>
+        <option>Fahrenheit</option>
+        <option>Kelvin</option>
+        
+    </select>
+</div>
+       <div class="center">
+       Enter the Temperature : 
+       <input id="inp" type="number" class="cel">
+    </div>
+    <div class="center">
+    <button onclick="fun1()">
+        Result
+    </button>
+    </div>
+    </div>
+    
+</body>
+</html>
